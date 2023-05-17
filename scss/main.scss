@@ -1,0 +1,272 @@
+@import './colors';
+@import './components';
+@import './mixins';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Cinzel', serif;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.6rem;
+	background-color: $white;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/mother-with-child_640.jpg');
+	background-size: cover;
+	background-position: center;
+
+	.icon__box {
+		width: 100%;
+		height: 4.5em;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__burger-icon {
+		position: fixed;
+		@include headerIcon;
+	}
+
+	.nav {
+		position: fixed;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 1;
+
+		&-mobile {
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			transform: translateX(100%);
+			transition: transform 0.3s;
+
+			&--active {
+				transform: translateX(0);
+			}
+		}
+		&__link {
+			position: relative;
+			display: flex;
+			font-size: 2.8rem;
+			text-decoration: none;
+			color: $white;
+			padding: 0.5em 1em;
+			justify-content: center;
+			transition: 0.3s;
+
+			&:hover {
+				color: $darkgrey;
+			}
+		}
+		&__link--mobile {
+			&:nth-child(2) {
+				margin-top: 4.8em;
+
+				&::before {
+					position: absolute;
+					content: '';
+					top: -30px;
+					width: 70%;
+					height: 1px;
+					background-color: $grey;
+					cursor: default;
+				}
+			}
+		}
+
+		&-desktop {
+			display: none;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		top: 83%;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+		&--my-name {
+			font-size: 6rem;
+			font-weight: 200;
+			white-space: nowrap;
+		}
+		&--quote {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+// about-me
+
+.about-me {
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		padding: 5em
+	}
+	
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		width: 400px;
+		height: 700px;
+		margin: 2em 0;
+		padding: 1em;
+		justify-content: center;
+		background-color: $lightgrey;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	&__photo {
+		height: 100%;
+		filter: grayscale(90%);
+	}
+
+	&__motto {
+		padding: 0.7em;
+		font-size: 2rem;
+		text-align: center;
+	}
+	&__link {
+		margin-bottom: 0.5em;
+		font-size: 1.7rem;
+		@include articleLink;
+
+		.fa-arrow-right {
+			margin-right: 1em;
+			margin-top: 0.15em;
+		}
+	}
+}
+
+// journal
+
+.hero-img {
+	position: relative;
+	height: 10em;
+	background-image: url('../img/journal/leaf-4558448_640.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+	.hero-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+	.section-title {
+		position: absolute;
+		font-size: 3.5rem;
+		color: $white;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	color: BLACK;
+	z-index: 5;
+	overflow: hidden;
+	align-items: center;
+}
+
+.journal-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__text {
+		font-size: 2.5rem;
+		width: 30%;
+		margin-right: 5em;
+		font-weight: 200;
+	}
+	&__title {
+		margin-bottom: 1.5em;
+		font-size: 4rem;
+		font-weight: 200;
+	}
+	&__photo {
+		scale: 0.8;
+		transform: rotateZ(10deg);
+	}
+	&__link {
+		@include articleLink;
+		margin-top: 1em;
+		font-size: 2rem;
+		
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		background-image: url('../img/mother-with-child_1920.jpg');
+
+		&__burger-icon,
+		.icon__box {
+			display: none;
+		}
+
+		&__text {
+			top: 80%;
+
+			&--my-name {
+				font-size: 7.8rem;
+			}
+			&--quote {
+				font-size: 1.8rem;
+			}
+		}
+
+		.nav-desktop {
+			display: flex;
+			height: 4.5em;
+			width: 100%;
+			justify-content: space-evenly;
+		}
+	}
+
+	.about-me {
+		&__box {
+			flex-direction: row;
+			align-items: center;
+			width: 700px;
+			height: 400px;
+		}
+		&__link {
+			margin-top: 4.5em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.about-me {
+		&__box {
+			flex-direction: row;
+			align-items: center;
+			width: 800px;
+			height: 500px;
+		}
+	}
+}

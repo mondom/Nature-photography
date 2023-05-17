@@ -1,0 +1,47 @@
+@mixin headerIcon {
+	padding: 0.4em;
+	background: none;
+	border: 1px solid transparent;
+	color: $white;
+	transition: 0.3s;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		color: $darkgrey;
+	}
+}
+
+@mixin articleLink {
+	position: relative;
+		display: flex;
+		justify-content: center;
+		padding: .5em;
+		font-weight: 200;
+		text-decoration: none;
+		color: $darkgrey;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -2px;
+			height: 1px;
+			width: 0;
+			background-color: $grey;
+			cursor: default;
+			transition: width 0.5s;
+			
+		}
+		&::before {
+			right: 50%;
+		}
+		&::after {
+			left: 50%;
+		}
+		&:hover::before,
+		&:hover::after {
+			width: 30%;
+		}
+}
+
+

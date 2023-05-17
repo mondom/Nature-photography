@@ -1,0 +1,332 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header__burger-icon {
+  position: absolute;
+  right: 0.8em;
+  font-size: 2em;
+  padding: 0.4em;
+  background: none;
+  border: 1px solid transparent;
+  color: #f5f5f5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header__burger-icon:hover, .header__burger-icon:focus {
+  color: #676767;
+}
+
+.nav-mobile__close-icon {
+  position: relative;
+  left: 50%;
+  top: 1.5em;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  padding: 0.4em;
+  background: none;
+  border: 1px solid transparent;
+  color: #f5f5f5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nav-mobile__close-icon:hover, .nav-mobile__close-icon:focus {
+  color: #676767;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cinzel", serif;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  background-color: #f5f5f5;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/mother-with-child_640.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.header .icon__box {
+  width: 100%;
+  height: 4.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.header__burger-icon {
+  position: fixed;
+  padding: 0.4em;
+  background: none;
+  border: 1px solid transparent;
+  color: #f5f5f5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header__burger-icon:hover, .header__burger-icon:focus {
+  color: #676767;
+}
+.header .nav {
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.header .nav-mobile {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+.header .nav-mobile--active {
+  transform: translateX(0);
+}
+.header .nav__link {
+  position: relative;
+  display: flex;
+  font-size: 2.8rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 0.5em 1em;
+  justify-content: center;
+  transition: 0.3s;
+}
+.header .nav__link:hover {
+  color: #676767;
+}
+.header .nav__link--mobile:nth-child(2) {
+  margin-top: 4.8em;
+}
+.header .nav__link--mobile:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: -30px;
+  width: 70%;
+  height: 1px;
+  background-color: #808080;
+  cursor: default;
+}
+.header .nav-desktop {
+  display: none;
+}
+.header__text {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5f5f5;
+}
+.header__text--my-name {
+  font-size: 6rem;
+  font-weight: 200;
+  white-space: nowrap;
+}
+.header__text--quote {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.about-me .wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5em;
+}
+.about-me__box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+  margin: 2em 0;
+  padding: 1em;
+  justify-content: center;
+  background-color: #ececec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-me__photo {
+  height: 100%;
+  filter: grayscale(90%);
+}
+.about-me__motto {
+  padding: 0.7em;
+  font-size: 2rem;
+  text-align: center;
+}
+.about-me__link {
+  margin-bottom: 0.5em;
+  font-size: 1.7rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  font-weight: 200;
+  text-decoration: none;
+  color: #676767;
+}
+.about-me__link::before, .about-me__link::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  height: 1px;
+  width: 0;
+  background-color: #808080;
+  cursor: default;
+  transition: width 0.5s;
+}
+.about-me__link::before {
+  right: 50%;
+}
+.about-me__link::after {
+  left: 50%;
+}
+.about-me__link:hover::before, .about-me__link:hover::after {
+  width: 30%;
+}
+.about-me__link .fa-arrow-right {
+  margin-right: 1em;
+  margin-top: 0.15em;
+}
+
+.hero-img {
+  position: relative;
+  height: 10em;
+  background-image: url("../img/journal/leaf-4558448_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.hero-img .hero-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -10;
+}
+.hero-img .section-title {
+  position: absolute;
+  font-size: 3.5rem;
+  color: #f5f5f5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  color: BLACK;
+  z-index: 5;
+  overflow: hidden;
+  align-items: center;
+}
+
+.journal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.journal-box__text {
+  font-size: 2.5rem;
+  width: 30%;
+  margin-right: 5em;
+  font-weight: 200;
+}
+.journal-box__title {
+  margin-bottom: 1.5em;
+  font-size: 4rem;
+  font-weight: 200;
+}
+.journal-box__photo {
+  scale: 0.8;
+  transform: rotateZ(10deg);
+}
+.journal-box__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  font-weight: 200;
+  text-decoration: none;
+  color: #676767;
+  margin-top: 1em;
+  font-size: 2rem;
+}
+.journal-box__link::before, .journal-box__link::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  height: 1px;
+  width: 0;
+  background-color: #808080;
+  cursor: default;
+  transition: width 0.5s;
+}
+.journal-box__link::before {
+  right: 50%;
+}
+.journal-box__link::after {
+  left: 50%;
+}
+.journal-box__link:hover::before, .journal-box__link:hover::after {
+  width: 30%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url("../img/mother-with-child_1920.jpg");
+  }
+  .header__burger-icon,
+  .header .icon__box {
+    display: none;
+  }
+  .header__text {
+    top: 80%;
+  }
+  .header__text--my-name {
+    font-size: 7.8rem;
+  }
+  .header__text--quote {
+    font-size: 1.8rem;
+  }
+  .header .nav-desktop {
+    display: flex;
+    height: 4.5em;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .about-me__box {
+    flex-direction: row;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+  }
+  .about-me__link {
+    margin-top: 4.5em;
+  }
+}
+@media (min-width: 992px) {
+  .about-me__box {
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+  }
+}/*# sourceMappingURL=main.css.map */
