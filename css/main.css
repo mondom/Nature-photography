@@ -229,7 +229,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.wrapper {
+.journal-boxes {
   display: flex;
   flex-direction: column;
   color: BLACK;
@@ -239,24 +239,35 @@ body {
 }
 
 .journal-box {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.journal-box__text {
-  font-size: 2.5rem;
-  width: 30%;
-  margin-right: 5em;
-  font-weight: 200;
+.journal-box::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 70%;
+  background-color: #676767;
+  bottom: 2em;
 }
 .journal-box__title {
-  margin-bottom: 1.5em;
+  margin: 1em auto;
   font-size: 4rem;
   font-weight: 200;
 }
+.journal-box__text {
+  font-size: 2.5rem;
+  width: 80%;
+  text-align: center;
+  font-weight: 200;
+}
 .journal-box__photo {
-  scale: 0.8;
-  transform: rotateZ(10deg);
+  scale: 0.6;
+  margin-top: -6em;
+  border-radius: 12px;
 }
 .journal-box__link {
   position: relative;
@@ -287,6 +298,9 @@ body {
 }
 .journal-box__link:hover::before, .journal-box__link:hover::after {
   width: 30%;
+}
+.journal-box--three {
+  width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -321,6 +335,9 @@ body {
   .about-me__link {
     margin-top: 4.5em;
   }
+  .journal-box__photo {
+    scale: 0.8;
+  }
 }
 @media (min-width: 992px) {
   .about-me__box {
@@ -328,5 +345,26 @@ body {
     align-items: center;
     width: 800px;
     height: 500px;
+  }
+  .journal-box {
+    flex-direction: row;
+  }
+  .journal-box__text {
+    width: 75%;
+    padding: 0.5em;
+  }
+  .journal-box__photo {
+    margin-top: 2em;
+    transform: rotateZ(10deg);
+  }
+  .journal-box--one, .journal-box--two {
+    width: 90%;
+  }
+  .journal-box--two .journal-box__photo {
+    order: -1;
+    transform: rotateZ(-10deg);
+  }
+  .journal-box::before {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

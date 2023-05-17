@@ -118,9 +118,8 @@ body {
 	.wrapper {
 		display: flex;
 		justify-content: center;
-		padding: 5em
+		padding: 5em;
 	}
-	
 
 	&__box {
 		display: flex;
@@ -183,7 +182,7 @@ body {
 	}
 }
 
-.wrapper {
+.journal-boxes {
 	display: flex;
 	flex-direction: column;
 	color: BLACK;
@@ -193,29 +192,45 @@ body {
 }
 
 .journal-box {
+	position: relative;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	&__text {
-		font-size: 2.5rem;
-		width: 30%;
-		margin-right: 5em;
-		font-weight: 200;
+	&::before {
+		position: absolute;
+		content: '';
+		height: 1px;
+		width: 70%;
+		background-color: $darkgrey;
+		bottom: 2em;
 	}
+
 	&__title {
-		margin-bottom: 1.5em;
+		margin: 1em auto;
 		font-size: 4rem;
 		font-weight: 200;
 	}
+
+	&__text {
+		font-size: 2.5rem;
+		width: 80%;
+		text-align: center;
+		font-weight: 200;
+	}
+
 	&__photo {
-		scale: 0.8;
-		transform: rotateZ(10deg);
+		scale: 0.6;
+		margin-top: -6em;
+		border-radius: 12px;
 	}
 	&__link {
 		@include articleLink;
 		margin-top: 1em;
 		font-size: 2rem;
-		
+	}
+	&--three {
+		width: 90%;
 	}
 }
 
@@ -258,6 +273,11 @@ body {
 			margin-top: 4.5em;
 		}
 	}
+	.journal-box {
+		&__photo {
+			scale: 0.8;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -267,6 +287,33 @@ body {
 			align-items: center;
 			width: 800px;
 			height: 500px;
+		}
+	}
+	.journal-box {
+		flex-direction: row;
+
+		&__text {
+			width: 75%;
+			padding: 0.5em;
+		}
+
+		&__photo {
+			margin-top: 2em;
+			transform: rotateZ(10deg);
+		}
+		
+		&--one,
+		&--two {
+			width: 90%;
+		}
+		&--two {
+			.journal-box__photo {
+				order: -1;
+				transform: rotateZ(-10deg);
+			}
+		}
+		&::before {
+			display: none;
 		}
 	}
 }
