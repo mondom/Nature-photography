@@ -13,35 +13,32 @@
 
 @mixin articleLink {
 	position: relative;
-		display: flex;
-		justify-content: center;
-		padding: .5em;
-		font-weight: 200;
-		text-decoration: none;
-		color: $darkgrey;
+	display: flex;
+	justify-content: center;
+	padding: 0.5em;
+	font-weight: 200;
+	text-decoration: none;
+	color: $darkgrey;
 
-		&::before,
-		&::after {
-			position: absolute;
-			content: '';
-			bottom: -2px;
-			height: 1px;
-			width: 0;
-			background-color: $grey;
-			cursor: default;
-			transition: width 0.5s;
-			
-		}
-		&::before {
-			right: 50%;
-		}
-		&::after {
-			left: 50%;
-		}
-		&:hover::before,
-		&:hover::after {
-			width: 30%;
-		}
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: -2px;
+		height: 1px;
+		width: 0;
+		background-color: $grey;
+		cursor: default;
+		transition: width 0.5s;
+	}
+	&::before {
+		right: 50%;
+	}
+	&::after {
+		left: 50%;
+	}
+	&:hover::before,
+	&:hover::after {
+		width: 30%;
+	}
 }
-
-

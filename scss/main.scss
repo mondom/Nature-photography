@@ -20,6 +20,10 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 1.6rem;
 	background-color: $white;
+	overflow-x: hidden;
+}
+.sticky-body {
+	overflow-y: hidden;
 }
 
 .header {
@@ -31,9 +35,11 @@ body {
 	background-position: center;
 
 	.icon__box {
+		position: fixed;
 		width: 100%;
 		height: 4.5em;
 		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 1;
 	}
 
 	&__burger-icon {
@@ -115,10 +121,12 @@ body {
 // about-me
 
 .about-me {
+	&-section-title {
+		padding: 5em 0;
+	}
 	.wrapper {
 		display: flex;
 		justify-content: center;
-		padding: 5em;
 	}
 
 	&__box {
@@ -126,7 +134,7 @@ body {
 		flex-direction: column;
 		width: 400px;
 		height: 700px;
-		margin: 2em 0;
+		margin-bottom: 5em;
 		padding: 1em;
 		justify-content: center;
 		background-color: $lightgrey;
@@ -154,83 +162,211 @@ body {
 		}
 	}
 }
-
-// journal
-
-.hero-img {
-	position: relative;
-	height: 10em;
-	background-image: url('../img/journal/leaf-4558448_640.jpg');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	z-index: 0;
-	.hero-shadow {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
-		z-index: -10;
+.journal {
+	.journal-boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: BLACK;
+		overflow: hidden;
+		z-index: 5;
 	}
+
+	.journal-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&--one,
+		&--two {
+			&::before {
+				position: absolute;
+				content: '';
+				height: 1px;
+				width: 70%;
+				background-color: $darkgrey;
+				bottom: 2em;
+			}
+		}
+
+		&__title {
+			margin: 0.5em auto;
+			font-size: 4rem;
+			font-weight: 200;
+		}
+
+		&__text {
+			font-size: 2.5rem;
+			width: 80%;
+			text-align: center;
+			font-weight: 200;
+		}
+
+		&__photo {
+			scale: 0.6;
+			margin-top: -6em;
+			border-radius: 12px;
+		}
+		&__link {
+			@include articleLink;
+			margin-top: 1em;
+			font-size: 2rem;
+		}
+		&--three {
+			width: 90%;
+		}
+	}
+}
+
+// gallery
+.portfolio {
+	height: 35em;
 	.section-title {
-		position: absolute;
-		font-size: 3.5rem;
+		position: relative;
+		margin-top: 6em;
+	}
+	.gallery-box {
+		display: flex;
+		align-items: center;
+		&__photo {
+			margin: 2em;
+			border-radius: 10px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -4px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+			transition: scale 0.3s;
+			&:hover {
+				scale: 1.1;
+			}
+		}
+	}
+}
+
+// footer
+
+.footer {
+	background-color: $darkgrey;
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 15em;
+		align-items: center;
 		color: $white;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+
+		&__left,
+		&__right {
+			padding: 0 2em;
+			margin: 1.2em 0;
+		}
+		&__left {
+			.my-name {
+				font-size: 4rem;
+				margin-top: 1em;
+				margin-bottom: 0.5em;
+			}
+			.place {
+				font-style: italic;
+				text-align: center;
+			}
+		}
+		&__medium {
+			position: relative;
+			display: none;
+			font-size: 2.2rem;
+			font-weight: 200;
+			&::before {
+				position: absolute;
+				content: '';
+				height: 1px;
+				width: 50%;
+				background-color: $white;
+				top: 1em;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&-one,
+			&-two {
+				display: flex;
+				flex-direction: column;
+				margin: 2em;
+				height: 3em;
+				text-align: center;
+			}
+			&-three {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.map {
+				text-decoration: none;
+				color: $white;
+				line-height: 1.8em;
+				transition: color 0.3s;
+				&:hover {
+					color: $grey;
+				}
+			}
+		}
+		&__right {
+			text-align: center;
+
+			.mail {
+				font-size: 2rem;
+				margin-bottom: 1em;
+				font-style: italic;
+			}
+			&--media {
+				display: flex;
+				font-size: 3rem;
+				justify-content: space-around;
+				margin-bottom: 1em;
+				cursor: pointer;
+			}
+		}
 	}
-}
-
-.journal-boxes {
-	display: flex;
-	flex-direction: column;
-	color: BLACK;
-	z-index: 5;
-	overflow: hidden;
-	align-items: center;
-}
-
-.journal-box {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	&::before {
-		position: absolute;
-		content: '';
-		height: 1px;
-		width: 70%;
-		background-color: $darkgrey;
-		bottom: 2em;
-	}
-
-	&__title {
-		margin: 1em auto;
-		font-size: 4rem;
-		font-weight: 200;
-	}
-
-	&__text {
-		font-size: 2.5rem;
-		width: 80%;
+	&-box__bottom {
+		width: 100%;
 		text-align: center;
-		font-weight: 200;
+		padding: 1em;
+		color: $white;
 	}
+}
 
-	&__photo {
-		scale: 0.6;
-		margin-top: -6em;
-		border-radius: 12px;
+@media (min-width: 576px) {
+	.footer {
+		&-box {
+			flex-direction: row;
+
+			&__left,
+			&__right {
+				margin: 0 1em;
+			}
+			&__left {
+				.my-name {
+					margin-top: 0;
+					margin-bottom: 0.8em;
+				}
+				.place {
+					text-align: left;
+				}
+			}
+
+			&__right {
+				margin-top: 2.5em;
+				.mail {
+					margin-bottom: 0;
+					padding: 0.5em;
+				}
+				&--media {
+					padding: 0.5em;
+				}
+			}
+		}
 	}
-	&__link {
-		@include articleLink;
-		margin-top: 1em;
-		font-size: 2rem;
-	}
-	&--three {
-		width: 90%;
+	.portfolio {
+		height: 40em;
 	}
 }
 
@@ -273,11 +409,7 @@ body {
 			margin-top: 4.5em;
 		}
 	}
-	.journal-box {
-		&__photo {
-			scale: 0.8;
-		}
-	}
+	
 }
 
 @media (min-width: 992px) {
@@ -289,31 +421,59 @@ body {
 			height: 500px;
 		}
 	}
-	.journal-box {
-		flex-direction: row;
-
-		&__text {
-			width: 75%;
-			padding: 0.5em;
-		}
-
-		&__photo {
+	.journal {
+		.journal-box {
+			flex-direction: row;
 			margin-top: 2em;
-			transform: rotateZ(10deg);
-		}
-		
-		&--one,
-		&--two {
-			width: 90%;
-		}
-		&--two {
-			.journal-box__photo {
-				order: -1;
-				transform: rotateZ(-10deg);
+	
+			&__text {
+				width: 75%;
+				padding: 0.5em;
+			}
+	
+			&__photo {
+				
+				transform: rotateZ(10deg);
+				transition: transform 0.3s;
+			}
+	
+			&--one,
+			&--two {
+				width: 90%;
+			}
+			&--two {
+				.journal-box__photo {
+					order: -1;
+					transform: rotateZ(-10deg);
+				}
+			}
+			&::before {
+				display: none;
 			}
 		}
-		&::before {
-			display: none;
+	}
+	
+	.footer {
+		&-box {
+			&__medium {
+				display: flex;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section-title {
+		height: 4em;
+		background-color: $white;
+		margin: 2em 0;
+
+		&__text {
+			font-size: 4rem;
+			.four,
+			.five {
+				display: inline-block;
+			}
 		}
 	}
 }

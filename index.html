@@ -8,8 +8,10 @@
     <title>Nature Photography</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/f234464579.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -31,7 +33,7 @@
             <a class="nav__link nav__link--mobile" href="#about-me">Sophia</a>
             <a class="nav__link nav__link--mobile" href="#journal">Journal</a>
             <a class="nav__link nav__link--mobile" href="#portfolio">Portfolio</a>
-            <a class="nav__link nav__link--mobile" href="#contact">Contact</a>
+            <a class="nav__link nav__link--mobile" href="#footer">Contact</a>
 
         </nav>
 
@@ -40,7 +42,7 @@
             <a class="nav__link nav__link--desktop" href="#about-me">Spohia</a>
             <a class="nav__link nav__link--desktop" href="#journal">Journal</a>
             <a class="nav__link nav__link--desktop" href="#portfolio">Portfolio</a>
-            <a class="nav__link nav__link--desktop" href="#contact">Contact</a>
+            <a class="nav__link nav__link--desktop" href="#footer">Contact</a>
         </nav>
 
         <div class="header__text">
@@ -53,6 +55,15 @@
 
     <main>
         <section class="about-me" id="about-me">
+            <div class="section-title about-me-section-title">
+                <h2 class="section-title__text">
+                    <span class="one">about me</span>
+                    <span class="two">about me</span>
+                    <span class="three">about me</span>
+                    
+                </h2>
+            </div>
+
             <div class="wrapper">
                 <div class="about-me__box">
                     <img class="about-me__photo" src="./img/woman_640.jpg" alt="photo showing Sophie Wilson">
@@ -73,12 +84,16 @@
         <section class="journal" id="journal">
 
 
-           <div class="hero-img">
-            <div class="hero-shadow"></div>
-            
-                <h2 class="section-title">Journal</h2>
+            <div class="section-title">
+                <h2 class="section-title__text"> 
+                    <span class="one">journal</span>
+                    <span class="two">journal</span>
+                    <span class="three">journal</span>
+                    
+                </h2>
             </div>
-            <div class="wrapper carousel journal-boxes">
+
+            <div class="wrapper journal-boxes">
                 <div class="journal-box journal-box--one">
                     <div class="journal-box__text">
                         <h3 class="journal-box__title">Germination</h3>
@@ -91,7 +106,7 @@
                     </div>
                     <img src="./img/journal/germ-1525665_640.jpg" alt="Germinating seed." class="journal-box__photo">
                 </div>
-        
+
                 <div class="journal-box journal-box--two">
                     <div class="journal-box__text">
                         <h3 class="journal-box__title">Light</h3>
@@ -106,7 +121,7 @@
                     </div>
                     <img src="./img/journal/lighthouse-2707528_640.jpg" alt="" class="journal-box__photo">
                 </div>
-                
+
                 <div class="journal-box journal-box--three">
                     <div class="journal-box__text">
                         <h3 class="journal-box__title">Catch a movement</h3>
@@ -120,10 +135,72 @@
                 </div>
 
             </div>
-           
 
         </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="section-title">
+                <h2 class="section-title__text">
+                    <span class="one">portfolio</span>
+                    <span class="two">portfolio</span>
+                    <span class="three">portfolio</span>
+                    
+                </h2>
+
+            </div>
+            <div class="gallery-box">
+                <img class="gallery-box__photo" src="./img/girl_on_top_640.jpg"
+                    alt="Girl sitting on top of a mountain.">
+                <img class="gallery-box__photo" src="./img/beach_640.jpg" alt="Beach with palm trees.">
+                <img class="gallery-box__photo" src="./img/scotland_640.jpg" alt="Scotland landscape at sunset.">
+                <img class="gallery-box__photo" src="./img/israel_640.jpg" alt="The desert in israel.">
+                <img class="gallery-box__photo" src="./img/seagull_640.jpg" alt="Seagull in flight.">
+                <img class="gallery-box__photo" src="./img/indonesia_boy_640.jpg" alt="Boy holding a goat in his arms.">
+                <img class="gallery-box__photo" src="./img/raindrops_640.jpg"
+                    alt="Blade of grass with raindrops and a ladybug.">
+            </div>
+        </section>
     </main>
+
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <div class="footer-box">
+                <div class="footer-box__left">
+                    <p class="my-name">Sophia Wilson</p>
+                    <p class="place">Based in new york<br> available anywhere...</p>
+                </div>
+                <div class="footer-box__medium">
+                    <div class="footer-box__medium-one">
+                        <a class="map" href="#home">Home</a>
+                        <a class="map" href="#about-me">Sophia</a>
+                    </div>
+                    <div class="footer-box__medium-two">
+                        <a class="map" href="#journal">Journal</a>
+                        <a class="map" href="#portfolio">Portfolio</a>
+                    </div>
+                    <div class="footer-box__medium-three">
+                        <a class="map" href="#footer">Contact</a>
+                    </div>
+
+
+                </div>
+                <div class="footer-box__right">
+                    <p class="mail">sophiawilson.photo@gmail.com</p>
+                    <div class="footer-box__right--media">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-box__bottom">
+                <p class="footer-box__bottom-text">All rights reserved &copy; <span class="footer__year"></span> Nature
+                    Photography</p>
+            </div>
+        </div>
+    </footer>
+
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -22,4 +22,27 @@
 	@include headerIcon;
 }
 
+.section-title {
+	display: flex;
+	align-items: center;
+	height: 6em;
+	margin: 3em 0;
+	background-color: $white;
 
+	&__text {
+		width: 100%;
+		text-align: center;
+		font-size: 2rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: $grey;
+		
+	}
+}
+@media (min-width: 576px) {
+	.section-title {
+		&__text {
+			font-size: 3rem;
+		}
+	}
+}
