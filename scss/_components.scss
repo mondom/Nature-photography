@@ -26,16 +26,20 @@
 	display: flex;
 	align-items: center;
 	height: 6em;
+	width: 100%;
 	margin: 3em 0;
-	background-color: $white;
+	
+	
 
 	&__text {
 		width: 100%;
+		padding: .3em;
 		text-align: center;
 		font-size: 2rem;
 		font-weight: 900;
 		text-transform: uppercase;
-		color: $grey;
+		color: $white;
+		background-color: rgba(0, 0, 0, 0.4);
 		
 	}
 }
