@@ -311,6 +311,7 @@ body {
 
 .portfolio {
   min-height: 30em;
+  overflow: hidden;
 }
 .portfolio .section-title {
   position: relative;
