@@ -222,13 +222,14 @@ body {
 // gallery
 .portfolio {
 	min-height: 30em;
+	overflow-x: hidden;
 	.section-title {
 		position: relative;
 	}
 	.gallery-box {
 		display: flex;
 		align-items: center;
-		overflow-x: hidden;
+		
 		&__photo {
 			margin: 3em;
 			scale: 1.2;
