@@ -20,7 +20,7 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 1.6rem;
 	background-color: $white;
-	overflow-x: hidden;
+	
 }
 .sticky-body {
 	overflow: hidden;
@@ -52,6 +52,7 @@ body {
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: 1;
+		overflow: hidden;
 
 		&-mobile {
 			top: 0;
@@ -222,7 +223,8 @@ body {
 // gallery
 .portfolio {
 	min-height: 30em;
-	overflow-x: hidden;
+	overflow: hidden;
+	
 	.section-title {
 		position: relative;
 	}
