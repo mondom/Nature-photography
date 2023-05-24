@@ -41,7 +41,7 @@
   align-items: center;
   height: 6em;
   width: 100%;
-  margin: 3em 0;
+  margin-bottom: 3em;
 }
 .section-title__text {
   width: 100%;
@@ -81,7 +81,6 @@ body {
 }
 
 .sticky-body {
-  height: 100%;
   overflow-y: hidden;
 }
 
@@ -159,13 +158,13 @@ body {
 }
 .header__text {
   position: absolute;
-  top: 83%;
+  top: 81%;
   left: 50%;
   transform: translateX(-50%);
   color: #f5f5f5;
 }
 .header__text--my-name {
-  font-size: 6rem;
+  font-size: 5.3rem;
   font-weight: 200;
   white-space: nowrap;
 }
@@ -185,7 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 700px;
+  min-height: 700px;
   margin-bottom: 5em;
   padding: 1em;
   justify-content: center;
@@ -266,8 +265,8 @@ body {
   font-weight: 200;
 }
 .journal .journal-box__text {
-  font-size: 2.5rem;
-  width: 80%;
+  font-size: 2.3rem;
+  width: 70%;
   text-align: center;
   font-weight: 200;
 }
@@ -311,19 +310,18 @@ body {
 }
 
 .portfolio {
-  height: 35em;
+  min-height: 30em;
 }
 .portfolio .section-title {
   position: relative;
-  margin-top: 6em;
 }
 .portfolio .gallery-box {
   display: flex;
   align-items: center;
 }
 .portfolio .gallery-box__photo {
-  margin: 2em;
-  scale: 0.9;
+  margin: 3em;
+  scale: 1.2;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -4px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   transition: scale 0.3s;
@@ -416,6 +414,11 @@ body {
   color: #f5f5f5;
 }
 
+@media (min-width: 414px) {
+  .portfolio .section-title {
+    margin: 0 0 2em;
+  }
+}
 @media (min-width: 576px) {
   .footer-box {
     flex-direction: row;
@@ -441,11 +444,10 @@ body {
     padding: 0.5em;
   }
   .portfolio {
-    height: 40em;
+    min-height: 40em;
   }
   .portfolio .section-title {
     position: relative;
-    margin-top: 6em;
   }
   .portfolio .gallery-box {
     display: flex;
@@ -488,6 +490,13 @@ body {
   .about-me__link {
     margin-top: 4.5em;
   }
+  .journal-box__text {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  .portfolio {
+    margin-bottom: -10em;
+  }
 }
 @media (min-width: 992px) {
   .about-me__box {
@@ -518,6 +527,9 @@ body {
   .journal .journal-box::before {
     display: none;
   }
+  .portfolio {
+    min-height: 42em;
+  }
   .footer-box__medium {
     display: flex;
   }
@@ -534,5 +546,8 @@ body {
   .section-title__text .four,
   .section-title__text .five {
     display: inline-block;
+  }
+  .portfolio {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=main.css.map */
