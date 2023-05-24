@@ -318,6 +318,7 @@ body {
 .portfolio .gallery-box {
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 .portfolio .gallery-box__photo {
   margin: 3em;
