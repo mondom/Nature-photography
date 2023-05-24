@@ -81,7 +81,7 @@ body {
 }
 
 .sticky-body {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .header {
