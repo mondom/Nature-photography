@@ -1,3 +1,4 @@
+$(document).ready(function () {
 $('.gallery-box').slick({
 	dots: false,
 	arrows: false,
@@ -32,3 +33,4 @@ $('.gallery-box').slick({
 	  }
 	]
   });
+  })
