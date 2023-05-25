@@ -7,7 +7,6 @@ $('.gallery-box').slick({
 	speed: 400,
 	slidesToShow: 3,
 	slidesToScroll: 1,
-	respondTo: slider,
 	responsive: [
 	  {
 		breakpoint: 1024,

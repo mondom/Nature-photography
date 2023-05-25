@@ -13,6 +13,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 1.6rem;
 	background-color: $white;
+	
 }
 .sticky-body {
 	overflow: hidden;
@@ -220,6 +222,8 @@ body {
 }
 
 // gallery
+
+
 .gallery-box {
 	margin-bottom: 4em;
 	
