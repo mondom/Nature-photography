@@ -15,6 +15,12 @@ const handleNav = () => {
 		})
 	})
 
+	allNavItems.forEach(item => {
+		item.addEventListener('click', () => {
+			document.body.classList.remove('sticky-body')
+		})
+	})
+
 }
 
 burgerBtn.addEventListener('click', handleNav)
