@@ -222,6 +222,7 @@ body {
 // gallery
 .gallery-box {
 	margin-bottom: 4em;
+	overflow: hidden;
 	&__photo {
 		margin: 0 1em;
 		border-radius: 8px;
