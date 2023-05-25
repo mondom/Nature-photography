@@ -311,10 +311,9 @@ body {
 
 .gallery-box {
   margin-bottom: 4em;
-  overflow: hidden;
 }
 .gallery-box__photo {
-  margin: 0 1em;
+  padding: 0 1em;
   border-radius: 8px;
 }
 
